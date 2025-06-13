@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greedy Activity Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f8f8;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type=number] {
+            width: 80px;
+            margin-right: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 4px 8px;
+            text-align: center;
+        }
+        button {
+            margin-top: 10px;
+        }
+        #results {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Activity Selection</h1>
+    <p>Add activities with start and end times. The greedy algorithm will choose a
+        maximum-size set of non-overlapping activities.</p>
+    <div id="form">
+        <label>Start: <input id="start" type="number" min="0"></label>
+        <label>End: <input id="end" type="number" min="0"></label>
+        <button id="addBtn">Add Activity</button>
+    </div>
+    <table id="activityTable">
+        <thead>
+        <tr><th>#</th><th>Start</th><th>End</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <button id="selectBtn">Select Activities</button>
+    <ul id="results"></ul>
+</div>
+<script src="activity.js"></script>
+</body>
+</html>
